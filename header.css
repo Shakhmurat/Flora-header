@@ -676,8 +676,16 @@ body {
 	background-color: #A5D6F1;
 }
 
-.filter-price--index {
-	margin-bottom: 10px;
+/* Добавлять класс "fixed", принципе работы такой же, как у "fiter-tabs" */
+.filter-price--index.fixed {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  border-bottom: 1px solid #dadad4;
+  z-index: 4;
 }
 
 .filter-price--index .btn-dd {
