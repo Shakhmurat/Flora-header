@@ -458,6 +458,10 @@ body {
   white-space: nowrap;
 }
 
+.nav-list li:first-child span {
+  font-weight: bold;
+}
+
 .nav-list li:first-child .btn-dd {
 	position: relative;
 	top: -5px;
