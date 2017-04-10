@@ -6,41 +6,41 @@
 		Начало
 */
 
-/*.popup-overlay {
+.popup-overlay {
 	display: none !important;
-}*/
+}
 
 .btn-dd > span {
-  background: url('sprite-dn.png') right -315px no-repeat;
+  background: url('images/sprite-dn.png') right -315px no-repeat;
 }
 
 .btn-cart i {
-	background: url('oval.png') 0 0 no-repeat;
+	background: url('images/oval.png') 0 0 no-repeat;
 }
 
 a.close-popup {
-	background: url('close-icon.png') center no-repeat;
+	background: url('images/close-icon.png') center no-repeat;
 }
 
 .search input[type="submit"] {
-	background: url('icon-search.png') 0 0 no-repeat;
+	background: url('images/icon-search.png') 0 0 no-repeat;
 }
 
 .user-links .consultant {
-  background: url('sprite-dn.png') 0 -120px no-repeat;
+  background: url('images/sprite-dn.png') 0 -120px no-repeat;
 }
 
 .user-links .user-login {
   padding-left: 16px;
-  background: url('sprite-dn.png') 0 -440px no-repeat;
+  background: url('images/sprite-dn.png') 0 -440px no-repeat;
 }
 
 .ui-dialog .ui-dialog-titlebar-close span {
-	background: url('actions.png') -60px 0 no-repeat;
+	background: url('images/actions.png') -60px 0 no-repeat;
 }
 
 .popup-arrow {
-	background: url('corner-top.png') 0 0 no-repeat;
+	background: url('images/corner-top.png') 0 0 no-repeat;
 }
 
 /* 
@@ -232,7 +232,7 @@ body {
 }
 
 .top-line .btn-cart i {
-  background: url('oval.png') 0 0 no-repeat;
+  background: url('images/oval.png') 0 0 no-repeat;
   padding-left: 7px;
 	margin-left: 6px;
 	background-size: cover;
@@ -444,7 +444,7 @@ body {
 	width: 20px;
 	height: 20px;
 	margin: 3px 8px 0 0;
-	background: url('icon-search.png') 0 0 no-repeat;
+	background: url('images/icon-search.png') 0 0 no-repeat;
 }
 
 .nav-link {
