@@ -288,6 +288,17 @@ body {
 	padding: 0 4px;
 }
 
+.nav.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	padding: 10px 60px 0;
+	background-color: #fff;
+  z-index: 100;
+}
+
 .nav-list {
 	position: relative;
 	display: -webkit-box;
@@ -483,7 +494,8 @@ body {
 
 .nav-link,
 .sub-link,
-.sub-text {
+.sub-text,
+.filter-nav-link {
 	color: #292929;
 	font-size: 17px;
 }
@@ -506,10 +518,6 @@ body {
   z-index: 10;
 }
 
-.sub-nav .columns {
-	margin-bottom: 15px;
-}
-
 .sub-column {
 	display: table-cell;
 	padding: 0 95px 0 0;
@@ -517,6 +525,7 @@ body {
 }
 
 .sub-bottom {
+	margin-top: 15px;
 	margin-bottom: 10px
 }
 
@@ -531,6 +540,10 @@ body {
 
 .sub-column .btn:hover {
 	background: #fff;
+}
+
+.sub-nav .filter-price {
+	margin-top: 10px;
 }
 
 .sub-nav.one-child {
@@ -676,8 +689,8 @@ body {
 	background-color: #A5D6F1;
 }
 
-/* Добавлять класс "fixed", принципе работы такой же, как у "fiter-tabs" */
-.filter-price--index.fixed {
+/* Добавлять класс "fixed", принцип работы такой же, как у "fiter-tabs" */
+.filter--index.fixed {
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -688,7 +701,27 @@ body {
   z-index: 4;
 }
 
-.filter-price--index .btn-dd {
+.filter--index .filter-nav {
+	display: none;
+}
+
+.filter--index.fixed .filter-nav {
+	display: block;
+	margin-bottom: 25px;
+}
+
+.filter-nav a .favorite-counter {
+	margin-left: 5px;
+	border: none;
+}
+
+.filter-nav a:hover .favorite-counter {
+	color: #fff;
+	border: none;
+}
+
+.filter--index .btn-dd,
+.sub-nav .filter-price .btn-dd {
 	padding: 4px 12px 3px 14px;
 	margin: 0px 12px;
 	text-shadow: none;
@@ -698,7 +731,8 @@ body {
 	box-shadow: none;
 }
 
-.filter-price--index .currency-sign {
+.filter--index .currency-sign,
+.sub-nav .filter-price .currency-sign {
   margin-right: 7px;
   font-size: 17px;
   color: #4C4C4C;

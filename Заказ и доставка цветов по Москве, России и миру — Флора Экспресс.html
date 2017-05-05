@@ -828,7 +828,7 @@
                 <a href="" class="nav-link">Избранное <span class="favorite-counter">3</span></a>
               </li>
               <li class="nav-item">
-                <div class="sub-nav">
+                <!-- <div class="sub-nav">
                   <div class="columns">
                     <ul class="sub-column">
                       <li class="sub-item"><a class="sub-link" href="">Москва</a></li>
@@ -852,7 +852,33 @@
                     <a href="" class="btn">Все города</a>
                   </div>
                 </div>
-                <a href="" class="nav-link">ТОП городов</a>
+                <a href="" class="nav-link">ТОП городов</a> -->
+                <div class="sub-nav">
+                  <div class="columns">
+                    <div id="filter-price-all" class="popup filter-category-mouse ui-dialog-content ui-widget-content" style="display: block; width: auto; min-height: 100px; height: auto;" scrolltop="0" scrollleft="0">
+                      <div class="filter-price">
+                        <p class="amount-box">
+                          <label class="filter-price-label" for="from-price">от</label>
+                          <input id="from-price" class="amountmin" value="0" type="text">
+                          <label class="filter-price-label" for="to-price">до</label>
+                          <input id="to-price" class="amountmax second" value="700000" type="text">&nbsp;
+                          <span data-modal="language-currency" class="btn-dd"><span id="lang-curr"><i class="currency-sign kzt">₸</i></span></span>
+                          <span class="dd-cy"><span class="cy-chose"><span class=" rub" data-currency="rub" data-price-step="100" data-price-maxvalue="300000" data-price-values="0,15 000,50 000,100 000,200 000,300 000">руб</span><span data-currency="usd" data-price-step="5" data-price-maxvalue="5000" data-price-values="0,200,500,1 000,1 500,5 000">$</span><span data-currency="eur" data-price-step="5" data-price-maxvalue="5000" data-price-values="0,200,500,1 000,1 500,5 000">€</span><span class="active" data-currency="kzt" data-price-step="100" data-price-maxvalue="700000" data-price-values="0,30 000,100 000,300 000,700 000">₸</span></span>
+                          </span>
+                        </p>
+                        <div class="price-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                          <div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div>
+                          <a class="ui-slider-handle ui-state-default ui-corner-all first" href="#" style="left: 0%;"></a>
+                          <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a>
+                        </div>
+                        <div class="scale"><span class="first" style="left:0;">0</span><span style="left:4%;">30 000</span><span style="left:14%;">100 000</span><span style="left:42%;">300 000</span><span class="last" style="right:0;">700 000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <a href="" class="nav-link">Ваша цена</a>
               </li>
               <li class="nav-item without-sub">
                 <form action="https://www.floraexpress.ru/search" method="get" id="index-search">
@@ -920,7 +946,15 @@
         </div>
 
         <div class="section">
-         <div class="filter-price--index clearfix"> <!-- Добавлять класс fixed после прохождения данного блока -->
+         <div class="filter--index clearfix"> <!-- Добавлять класс fixed после прохождения данного блока -->
+            <ul class="filter-nav"> <!-- Блок изначально скрыт, при добавлении класса fixed к filter--index - блок становится видимым -->
+              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>День рождения</span></a></li>
+              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Популярные</span></a></li>
+              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Поводы</span></a></li>
+              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Корзины</span></a></li>
+              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Подарки</span></a></li>
+              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Избранное</span><span class="favorite-counter">3</span></a></li>
+            </ul>
             <ul class="filter-price-list">
               <li class="filter-price-item"><a href="" class="filter-price-link">Все</a></li>
               <li class="filter-price-item"><a href="" class="filter-price-link">До 10 000</a></li>
@@ -1229,7 +1263,7 @@
 
 
 
-                <!-- <div id="filter-price-all" class="popup filter-category-mouse">
+                <div id="filter-price-all" class="popup filter-category-mouse">
                   <div class="filter-price">
 
 
@@ -1253,7 +1287,7 @@
                     </div>
 
                   </div>
-                </div> -->
+                </div>
 
 
            <!--  </div>
