@@ -652,10 +652,11 @@
             </div>
             <div class="h-right">
               <div class="user-links">
+                <span data-modal="language-currency" class="btn-dd btn-language"><span id="lang-curr">Цены в<i class="currency-sign kzt">₸</i></span></span>
                 <span data-modal="empty-cart" class="btn-dd btn-cart">Корзина<i><span>0</span>
                 </i>
                 </span>
-                <a href="#" data-modal="shop-user-login" class="pseudo user-login"><span>Кабинет</span></a>
+                <a href="#" data-modal="shop-user-login" class="pseudo user-login"><span>Мои заказы</span></a>
               </div>
             </div>
           </div>
@@ -663,6 +664,14 @@
 
         <div class="top-line white">
           <div class="section">
+             <div class="h-left">
+                <a href="" data-modal="filter-delivery" class="pseudo delivery-link">Достака<br>
+                  <span>в Санкт-Петербург</span>
+                  <span class="btn-dd clicked">
+                    <span>Город</span>
+                  </span>
+                </a>
+            </div>
             <div class="h-right">
               <div class="user-links">
                 <a class="pseudo consultant" data-modal="consultant" href="#"><span>Онлайн-помощь 24/7</span></a>
@@ -717,23 +726,15 @@
         </div>
 
         <div class="section">
-          <div class="h-center">
+          <div class="h-center logo-primary">
             <a href="https://www.floraexpress.ru/" class="logo logo_0" title="FloraExpress - международная доставка цветов">
               <div>
                 <img src="logo.svg" title="FloraExpress - международная доставка цветов" alt="Заказ цветов по Москве, России и миру">
               </div>
             </a>
           </div>
-          <nav class="nav">
+          <nav class="nav"> <!-- При добавлении класса .fixed элемент цепляется к верху страницы -->
             <ul class="nav-list">
-              <li class="nav-item without-sub" data-modal="filter-delivery">
-                <a href="" class="pseudo nav-link" data-modal="filter-delivery">Достака<br>
-                  <span>в Санкт-Петербург</span>
-                  <span class="btn-dd clicked">
-                    <span>Город</span>
-                  </span>
-                </a>
-              </li>
               <li class="nav-item without-sub">
                 <a href="" class="nav-link">День рождения</a>
               </li>
@@ -828,31 +829,6 @@
                 <a href="" class="nav-link">Избранное <span class="favorite-counter">3</span></a>
               </li>
               <li class="nav-item">
-                <!-- <div class="sub-nav">
-                  <div class="columns">
-                    <ul class="sub-column">
-                      <li class="sub-item"><a class="sub-link" href="">Москва</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Берлин</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Лондон</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Париж</a></li>
-                    </ul>
-                    <ul class="sub-column">
-                      <li class="sub-item"><a class="sub-link" href="">Астана</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Рим</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Минск</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Вашингтон</a></li>
-                    </ul>
-                    <ul class="sub-column">
-                      <li class="sub-item"><a class="sub-link" href="">Киев</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Мадрид</a></li>
-                      <li class="sub-item"><a class="sub-link" href="">Иерусалим</a></li>
-                    </ul>
-                  </div>
-                  <div class="sub-bottom ta-center">
-                    <a href="" class="btn">Все города</a>
-                  </div>
-                </div>
-                <a href="" class="nav-link">ТОП городов</a> -->
                 <div class="sub-nav">
                   <div class="columns">
                     <div id="filter-price-all" class="popup filter-category-mouse ui-dialog-content ui-widget-content" style="display: block; width: auto; min-height: 100px; height: auto;" scrolltop="0" scrollleft="0">
@@ -862,21 +838,23 @@
                           <input id="from-price" class="amountmin" value="0" type="text">
                           <label class="filter-price-label" for="to-price">до</label>
                           <input id="to-price" class="amountmax second" value="700000" type="text">&nbsp;
-                          <span data-modal="language-currency" class="btn-dd"><span id="lang-curr"><i class="currency-sign kzt">₸</i></span></span>
+                          <span data-modal="language-currency" class="btn-dd"><span id="lang-curr">Цены в<i class="currency-sign kzt">₸</i></span></span>
                           <span class="dd-cy"><span class="cy-chose"><span class=" rub" data-currency="rub" data-price-step="100" data-price-maxvalue="300000" data-price-values="0,15 000,50 000,100 000,200 000,300 000">руб</span><span data-currency="usd" data-price-step="5" data-price-maxvalue="5000" data-price-values="0,200,500,1 000,1 500,5 000">$</span><span data-currency="eur" data-price-step="5" data-price-maxvalue="5000" data-price-values="0,200,500,1 000,1 500,5 000">€</span><span class="active" data-currency="kzt" data-price-step="100" data-price-maxvalue="700000" data-price-values="0,30 000,100 000,300 000,700 000">₸</span></span>
                           </span>
                         </p>
-                        <div class="price-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-                          <div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div>
-                          <a class="ui-slider-handle ui-state-default ui-corner-all first" href="#" style="left: 0%;"></a>
-                          <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a>
-                        </div>
-                        <div class="scale"><span class="first" style="left:0;">0</span><span style="left:4%;">30 000</span><span style="left:14%;">100 000</span><span style="left:42%;">300 000</span><span class="last" style="right:0;">700 000</span>
-                        </div>
+                        <div class="filter--index">
+                          <ul class="filter-price-list">
+                            <li class="filter-price-item"><a href="" class="filter-price-link">Все</a></li>
+                            <li class="filter-price-item"><a href="" class="filter-price-link">До 10 000</a></li>
+                            <li class="filter-price-item"><a href="" class="filter-price-link">10 000-20 000</a></li>
+                            <li class="filter-price-item"><a href="" class="filter-price-link">20 000-30 000</a></li>
+                            <li class="filter-price-item"><a href="" class="filter-price-link">Дорогие</a></li>
+                            <!-- <li class="filter-price-item"><a href="" data-modal="filter-price-all" class="filter-price-link active">Ваша цена</a></li> -->
+                          </ul>
+                       </div>
                       </div>
                     </div>
                   </div>
-
                 </div>
                 <a href="" class="nav-link">Ваша цена</a>
               </li>
@@ -893,78 +871,23 @@
           </nav>
         </div>
       </header>
+      
+      <div class="section geography">
+        <h1 id="catalog-ancor-element">Доставка свежих цветов по Москве, России и миру</h1>
+      </div>
 
       <div class="promo-full-width">
         <div class="section">
           <a href="">
             <p class="promo-full-width-title">Не упусти возможность заказать уникальный букет!</p>
-            <figure class="promo-bg fir-img-js">
+            <figure class="promo-bg fit-img-js">
               <img src="images/unique-bouquet.jpg">
             </figure>
           </a>
         </div>
       </div>
-      
-      <div class="promo-thumbs">
-        <div class="section clearfix">
-          <div class="promo-thumb-primary">
-            <div class="promo-inner">
-              <p class="promo-title">Мы доставляем букеты и подарки в 140 стран мира</p>
-              <a href="" class="promo-btn">Выбрать город</a>
-            </div>
-            <figure class="promo-bg fit-img-js">
-              <img src="images/test-3.jpg" class="promo-bg-img">
-            </figure>
-            <img src="images/girl.png" class="promo-abroad-img">
-          </div>
-          <div class="promo-thumb-secondary">
-            <div class="promo-inner">
-              <p class="promo-title">В день рождения она ждет от тебя особенный букет</p>
-              <a href="" class="promo-btn">Выбрать букет</a>
-            </div>
-            <figure class="promo-bg fit-img-js">
-              <img src="images/test-4.png" class="promo-bg-img">
-            </figure>
-            <img src="images/test-1.png" class="promo-abroad-img">
-          </div>
-          <div class="promo-thumb-secondary">
-            <div class="promo-inner">  
-              <p class="promo-title">Цветы для любимой</p>
-              <a href="" class="promo-btn">Выбрать букет</a>
-            </div>
-            <figure class="promo-bg fit-img-js">
-              <img src="images/thumb-secondary-img-2.png" class="promo-bg-img">
-            </figure>
-          </div>
-        </div>
-      </div>
 
       <div class="main-content">
-
-        <div class="section geography">
-          <h1 id="catalog-ancor-element">Доставка цветов по Москве, России и миру</h1>
-        </div>
-
-        <div class="section">
-         <div class="filter--index clearfix"> <!-- Добавлять класс fixed после прохождения данного блока -->
-            <ul class="filter-nav"> <!-- Блок изначально скрыт, при добавлении класса fixed к filter--index - блок становится видимым -->
-              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>День рождения</span></a></li>
-              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Популярные</span></a></li>
-              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Поводы</span></a></li>
-              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Корзины</span></a></li>
-              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Подарки</span></a></li>
-              <li class="filter-nav-item"><a class="filter-nav-link" href=""><span>Избранное</span><span class="favorite-counter">3</span></a></li>
-            </ul>
-            <ul class="filter-price-list">
-              <li class="filter-price-item"><a href="" class="filter-price-link">Все</a></li>
-              <li class="filter-price-item"><a href="" class="filter-price-link">До 10 000</a></li>
-              <li class="filter-price-item"><a href="" class="filter-price-link">10 000-20 000</a></li>
-              <li class="filter-price-item"><a href="" class="filter-price-link">20 000-30 000</a></li>
-              <li class="filter-price-item"><a href="" class="filter-price-link">Дорогие</a></li>
-              <li class="filter-price-item"><a href="" data-modal="filter-price-all" class="filter-price-link active">Ваша цена</a></li>
-            </ul>
-            <span data-modal="language-currency" class="btn-dd"><span id="lang-curr"><i class="currency-sign kzt">₸</i></span></span>
-         </div>
 
           <!-- <div id="fiter-tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all"> -->
             <!-- <span data-modal="location-сity" id="hidden-city" class="btn-popup">Город</span>
@@ -2333,24 +2256,17 @@
 
 
 
-            <div class="prd-item prd-item-hover masonry-brick" itemscope="" itemtype="http://schema.org/Product" itemprop="itemListElement" style="position: absolute; top: 0px; left: 932px;">
+            <div class="prd-item prd-prices no-popup masonry-brick" itemscope="" itemtype="http://schema.org/Product" itemprop="itemListElement" style="position: absolute; top: 0px; left: 932px;">
               <meta itemprop="description" content="Заказать букет Больше роз в Флора Экспресс">
 
               <a title="Больше роз" href="https://www.floraexpress.ru/ru/bouquet/bolshe-roz" itemprop="url">
                 <span class="prd-img">
-            <img src="%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%B8%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%20%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BE%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5,%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%BC%D0%B8%D1%80%D1%83%20%E2%80%94%20%D0%A4%D0%BB%D0%BE%D1%80%D0%B0%20%D0%AD%D0%BA%D1%81%D0%BF%D1%80%D0%B5%D1%81%D1%81_files/4019_360.jpeg" alt="Букет Больше роз" title="Заказать букет Больше роз в Флора Экспресс" itemprop="image">
-            
+            <!-- <img src="%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%B8%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%20%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BE%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5,%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%BC%D0%B8%D1%80%D1%83%20%E2%80%94%20%D0%A4%D0%BB%D0%BE%D1%80%D0%B0%20%D0%AD%D0%BA%D1%81%D0%BF%D1%80%D0%B5%D1%81%D1%81_files/4019_360.jpeg" alt="Букет Больше роз" title="Заказать букет Больше роз в Флора Экспресс" itemprop="image"> -->
+            <img src="%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%B8%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%20%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BE%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5,%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%20%D0%B8%20%D0%BC%D0%B8%D1%80%D1%83%20%E2%80%94%20%D0%A4%D0%BB%D0%BE%D1%80%D0%B0%20%D0%AD%D0%BA%D1%81%D0%BF%D1%80%D0%B5%D1%81%D1%81_files/advantages1x.png" alt="Букет Больше роз" title="Заказать букет Больше роз в Флора Экспресс" itemprop="image">
         </span>
 
-                <span class="prd-name" itemprop="name">Больше роз</span>
-                <button class="btn">Показать</button>
-                <span itemtype="http://schema.org/Offer" itemprop="offers" itemscope="">
-            <meta itemprop="priceCurrency" content="RUB">
-            <meta itemprop="price" content="1916.4">
-            <meta itemprop="availability" content="InStock">
-            <span class="prd-price"><span itemprop="price" class="val-pr">от 10 221</span> <i itemprop="priceCurrency" class="kzt bold">₸</i>
-                </span>
-                </span>
+                <span class="fact" itemprop="name">Преимущества заказа и доставки цветов на Floraexpress.ru</span>
+                
               </a>
 
 
