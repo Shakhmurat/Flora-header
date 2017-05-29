@@ -660,8 +660,9 @@ body {
 	left: 50%;
 	padding: 13px 0;
 	margin: 0;
-  font-size: 27px;
-  color: #fff;
+  font-size: 26px;
+  font-family: "PT Serif",antiquasiregular,sans-serif;
+  color: #724750;
   white-space: nowrap;
   transform: translate(-50%);
 }
